@@ -1,0 +1,17 @@
+{
+  "name": "spawn-wrapper",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "genDeclaration": "tsc  --emitDeclarationOnly --outDir dist",
+    "build": "yarn genDeclaration && esbuild --minify --bundle --outdir=dist --platform=node src/index.ts",
+    "prepare": "yarn build"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "esbuild": "^0.14.47",
+    "typescript": "^4.7.4"
+  }
+}
