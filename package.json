@@ -5,7 +5,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "genDeclaration": "tsc  --emitDeclarationOnly --outDir dist",
+    "genDeclaration": "tsc --emitDeclarationOnly --outDir dist",
     "build": "yarn genDeclaration && esbuild --minify --bundle --outdir=dist --platform=node src/index.ts",
     "prepare": "yarn build"
   },
