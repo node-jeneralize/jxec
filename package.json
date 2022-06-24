@@ -1,9 +1,22 @@
 {
-  "name": "spawn-wrapper",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "jxec",
+  "version": "0.0.2",
+  "main": "dist/index.js",
   "license": "MIT",
+  "description": "A promise supported spawn wrapper.",
+  "homepage": "https://github.com/node-jeneralize/jxec",
   "private": false,
+  "files": [
+    "dist/index.js",
+    "dist/index.d.ts"
+  ],
+  "author": {
+    "name": "sigma"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/node-jeneralize/jxec"
+  },
   "scripts": {
     "genDeclaration": "tsc --emitDeclarationOnly --outDir dist",
     "build": "yarn genDeclaration && esbuild --minify --bundle --outdir=dist --platform=node src/index.ts",
