@@ -22,8 +22,8 @@
     "build": "yarn genDeclaration && esbuild --minify --bundle --outdir=dist --platform=node src/index.ts",
     "prepare": "yarn build",
     "test": "jest",
-    "lint": "eslint --ext .ts .",
-    "lint:fix": "eslint --fix --ext .ts ."
+    "lint": "eslint --ext .ts . && prettier .",
+    "lint:fix": "eslint --fix --ext .ts . && prettier --write ."
   },
   "devDependencies": {
     "@types/jest": "^29.4.0",
@@ -37,6 +37,7 @@
     "eslint-plugin-n": "^15.0.0",
     "eslint-plugin-promise": "^6.0.0",
     "jest": "^29.4.3",
+    "prettier": "^2.8.4",
     "typescript": "*"
   }
 }
