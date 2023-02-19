@@ -1,6 +1,10 @@
+import { Jxec } from './index'
+
 describe('Jxec', () => {
-  test('sample', () => {
-    const actual = 1
-    expect(actual).toBe(1)
+  test('exec', async () => {
+    const spyOnConsole = jest.spyOn(console, 'log').mockImplementation()
+    const jxec = new Jxec()
+    await jxec.exec('echo', ['jxec'])
+    expect(spyOnConsole).toBeCalledWith('jxec\n')
   })
 })
