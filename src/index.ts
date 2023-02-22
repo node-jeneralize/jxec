@@ -36,8 +36,8 @@ export class Jxec {
     return this.history[this.history.length - 1].pid
   }
 
-  getPIDsNeverKilled(): Array<number | undefined> {
-    return this.history.filter((p) => !p.killed).map((p) => p.pid)
+  getAlivePIDs(): Array<number | undefined> {
+    return this.history.filter((p) => p.exitCode === null).map((p) => p.pid)
   }
 
   getHistory(): ChildProcess[] {
